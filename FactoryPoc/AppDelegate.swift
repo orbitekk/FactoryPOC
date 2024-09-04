@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Home
 import Listing
 import Account
 import AccountLogic
@@ -24,9 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let (listingViewController, accountViewController) = shared()
 //        let (listingViewController, accountViewController) = app()
 //        let (listingViewController, accountViewController) = modular()
+        
+        let homeDependencyProvider = InversionContainer()
+        let homeContainer = HomeContainer(homeDependencyProviding: homeDependencyProvider)
+        let homeViewController = homeContainer.homeViewController()
 
-        listingViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        accountViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
+        listingViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        accountViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
 
         let window = UIWindow()
         self.window = window
@@ -35,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController.tabBar.isTranslucent = false
 
         tabBarController.viewControllers = [
+            homeViewController,
             listingViewController,
             accountViewController
         ]

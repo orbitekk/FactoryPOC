@@ -47,6 +47,10 @@
 		03B002212C87203D002A0198 /* AccountLogicContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B002202C87203D002A0198 /* AccountLogicContainer.swift */; };
 		03B002232C872FAE002A0198 /* AccountContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B002222C872FAE002A0198 /* AccountContainer.swift */; };
 		03B002252C872FEF002A0198 /* ModularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B002242C872FEF002A0198 /* ModularContainer.swift */; };
+		03CA72482C886AEE00B2E001 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CA72422C886AEE00B2E001 /* Home.framework */; };
+		03CA72492C886AEE00B2E001 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03CA72422C886AEE00B2E001 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03CA725B2C886C2700B2E001 /* Container+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CA725A2C886C2700B2E001 /* Container+Home.swift */; };
+		03CA725D2C88706500B2E001 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 03CA725C2C88706500B2E001 /* Factory */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +103,13 @@
 			remoteGlobalIDString = 03B001D32C870441002A0198;
 			remoteInfo = AccountLogic;
 		};
+		03CA72462C886AEE00B2E001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B0018F2C870403002A0198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03CA72412C886AEE00B2E001;
+			remoteInfo = Home;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +122,7 @@
 				03B001EB2C87045A002A0198 /* Networking.framework in Embed Frameworks */,
 				03B001CB2C870428002A0198 /* Account.framework in Embed Frameworks */,
 				03B001BA2C87041E002A0198 /* Listing.framework in Embed Frameworks */,
+				03CA72492C886AEE00B2E001 /* Home.framework in Embed Frameworks */,
 				03B001DB2C870441002A0198 /* AccountLogic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -179,7 +191,23 @@
 		03B002202C87203D002A0198 /* AccountLogicContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLogicContainer.swift; sourceTree = "<group>"; };
 		03B002222C872FAE002A0198 /* AccountContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountContainer.swift; sourceTree = "<group>"; };
 		03B002242C872FEF002A0198 /* ModularContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularContainer.swift; sourceTree = "<group>"; };
+		03CA72422C886AEE00B2E001 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03CA725A2C886C2700B2E001 /* Container+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Home.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		03CA724A2C886AEE00B2E001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			publicHeaders = (
+				Home.h,
+			);
+			target = 03CA72412C886AEE00B2E001 /* Home */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		03CA72432C886AEE00B2E001 /* Home */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (03CA724A2C886AEE00B2E001 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Home; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		03B001942C870403002A0198 /* Frameworks */ = {
@@ -191,6 +219,7 @@
 				03B001CA2C870428002A0198 /* Account.framework in Frameworks */,
 				03B001B92C87041E002A0198 /* Listing.framework in Frameworks */,
 				03B001DA2C870441002A0198 /* AccountLogic.framework in Frameworks */,
+				03CA72482C886AEE00B2E001 /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +258,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03CA723F2C886AEE00B2E001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03CA725D2C88706500B2E001 /* Factory in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -236,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				03B001992C870403002A0198 /* FactoryPoc */,
+				03CA72432C886AEE00B2E001 /* Home */,
 				03B001B42C87041E002A0198 /* Listing */,
 				03B001C52C870428002A0198 /* Account */,
 				03B001D52C870441002A0198 /* AccountLogic */,
@@ -253,6 +291,7 @@
 				03B001C42C870428002A0198 /* Account.framework */,
 				03B001D42C870441002A0198 /* AccountLogic.framework */,
 				03B001E42C87045A002A0198 /* Networking.framework */,
+				03CA72422C886AEE00B2E001 /* Home.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +303,7 @@
 				03B002062C871448002A0198 /* AppContainer.swift */,
 				03B002122C871B28002A0198 /* SharedContainer.swift */,
 				03B002242C872FEF002A0198 /* ModularContainer.swift */,
+				03CA725A2C886C2700B2E001 /* Container+Home.swift */,
 				03B001A32C870405002A0198 /* Assets.xcassets */,
 				03B001A52C870405002A0198 /* LaunchScreen.storyboard */,
 				03B001A82C870405002A0198 /* Info.plist */,
@@ -356,6 +396,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03CA723D2C886AEE00B2E001 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -375,6 +422,7 @@
 				03B001C92C870428002A0198 /* PBXTargetDependency */,
 				03B001D92C870441002A0198 /* PBXTargetDependency */,
 				03B001E92C87045A002A0198 /* PBXTargetDependency */,
+				03CA72472C886AEE00B2E001 /* PBXTargetDependency */,
 			);
 			name = FactoryPoc;
 			packageProductDependencies = (
@@ -474,6 +522,30 @@
 			productReference = 03B001E42C87045A002A0198 /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		03CA72412C886AEE00B2E001 /* Home */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03CA724B2C886AEE00B2E001 /* Build configuration list for PBXNativeTarget "Home" */;
+			buildPhases = (
+				03CA723D2C886AEE00B2E001 /* Headers */,
+				03CA723E2C886AEE00B2E001 /* Sources */,
+				03CA723F2C886AEE00B2E001 /* Frameworks */,
+				03CA72402C886AEE00B2E001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				03CA72432C886AEE00B2E001 /* Home */,
+			);
+			name = Home;
+			packageProductDependencies = (
+				03CA725C2C88706500B2E001 /* Factory */,
+			);
+			productName = Home;
+			productReference = 03CA72422C886AEE00B2E001 /* Home.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -503,6 +575,10 @@
 						CreatedOnToolsVersion = 15.4;
 						LastSwiftMigration = 1540;
 					};
+					03CA72412C886AEE00B2E001 = {
+						CreatedOnToolsVersion = 16.0;
+						LastSwiftMigration = 1600;
+					};
 				};
 			};
 			buildConfigurationList = 03B001922C870403002A0198 /* Build configuration list for PBXProject "FactoryPoc" */;
@@ -522,6 +598,7 @@
 			projectRoot = "";
 			targets = (
 				03B001962C870403002A0198 /* FactoryPoc */,
+				03CA72412C886AEE00B2E001 /* Home */,
 				03B001B22C87041E002A0198 /* Listing */,
 				03B001C32C870428002A0198 /* Account */,
 				03B001D32C870441002A0198 /* AccountLogic */,
@@ -568,6 +645,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03CA72402C886AEE00B2E001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -577,6 +661,7 @@
 			files = (
 				03B002252C872FEF002A0198 /* ModularContainer.swift in Sources */,
 				03B0019B2C870403002A0198 /* AppDelegate.swift in Sources */,
+				03CA725B2C886C2700B2E001 /* Container+Home.swift in Sources */,
 				03B002072C871448002A0198 /* AppContainer.swift in Sources */,
 				03B002132C871B28002A0198 /* SharedContainer.swift in Sources */,
 			);
@@ -621,6 +706,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03CA723E2C886AEE00B2E001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -658,6 +750,11 @@
 			isa = PBXTargetDependency;
 			target = 03B001D32C870441002A0198 /* AccountLogic */;
 			targetProxy = 03B0020F2C871A1A002A0198 /* PBXContainerItemProxy */;
+		};
+		03CA72472C886AEE00B2E001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03CA72412C886AEE00B2E001 /* Home */;
+			targetProxy = 03CA72462C886AEE00B2E001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1122,6 +1219,79 @@
 			};
 			name = Release;
 		};
+		03CA724C2C886AEE00B2E001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.norbert-sroczynski.Home";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		03CA724D2C886AEE00B2E001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.norbert-sroczynski.Home";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1179,6 +1349,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		03CA724B2C886AEE00B2E001 /* Build configuration list for PBXNativeTarget "Home" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03CA724C2C886AEE00B2E001 /* Debug */,
+				03CA724D2C886AEE00B2E001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1214,6 +1393,11 @@
 			productName = Factory;
 		};
 		03B0021E2C871FDB002A0198 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03B001EF2C8704C6002A0198 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		03CA725C2C88706500B2E001 /* Factory */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 03B001EF2C8704C6002A0198 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
